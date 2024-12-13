@@ -1,0 +1,33 @@
+Did you attempt to make your computer player very smart -- 
+i.e., do something more clever than just pick a random legal move?
+
+Yes:
+1. Improve in offence:
+    a. Check if there is a win move, like 3 disks in column, put the next disk in the win move.
+2. Improve in defence:
+    a. Check if there's a loss move, like if human player have 3 disk in colum, put the next disk
+    to provent homan to win.
+
+If so, were you able to accomplish this? 
+
+No.
+
+Is your computer player as smart as you would like?   
+
+No.
+
+How did you determine which piece to play next? 
+
+1. If there's no win or provent lost the game, then pick random column to play next.
+
+Tell us about your “pick next move” algorithm
+How often did your computer program beat you, or your friends, or whoever tested it out for you?
+
+Not often
+
+How would you improve it in the future?
+
+1. Develop more user friendly UI, make it easy to use.
+2. Make it online game platform, people can play online with each other.
+3. Develop score board to rate all the players.
+4. Develop machine learning ai to train the ai player to improve the AI.

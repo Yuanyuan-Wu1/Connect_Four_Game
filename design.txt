@@ -1,0 +1,96 @@
+
+What data structures you’ll need (lists, dictionaries, etc.)
+What classes you’ll define
+What functions you’ll need (methods within classes, or other functions that exist outside of any class)
+A short description of each class and function/method
+A bullet-pointed pseudocode of your driver: Tell us about the flow of control, and think about the following cases:
+When the user makes a move
+When the disk is dropping
+When it’s the computer’s turn
+When game over status is assessed
+
+class Disk:
+	1.init:
+        1). size
+        2). color
+        3). disk row and col
+    2. draw_disk
+        1).nostroke()
+        2).color
+        3).a circle define by its radius and position
+    3. draw drop disk, if disk is hold, to judge the position of the drop disk, then draw it 
+
+class Board:
+    1.init:
+		1). Board size(width, height)
+		2). cell size
+		3). A data type representing different disk (List of list)
+                                        0    1   2
+                                    0   0    0   0
+                                    1   0    0   0
+                                    2   0    0   0
+
+        width:  3
+        height: 2
+
+    2.draw_board: 
+		1).stroke()
+		2).strokeWeight()
+		3). look for vertical line
+		for i in range(0, Width+1)
+		4) look for horizontal line:
+		for j in range(0, Height+1)
+    3.display_disk
+
+		another approach
+		calulate how many cells
+		for row in grid(cells):
+			for column in row:
+
+	4.get target_position
+        use for loop iterate the list when height is given, if is empty return width,
+        there is an element in the a cell , return it to none
+
+    5.drop_disk
+        decide whill list of list to place the disk
+
+class GameController
+    1.init
+		1). board (cell_size, row, column)
+		2). disk(row, column,color,radius)
+    
+    
+    2A function to check if the board if full
+    
+		
+    2. draw game (draw board and add disk)
+    3. swith palyer
+
+        1)if yellow turn return red turn
+        2)if red turn return yellow turn
+ 
+    4.if game_over: text message to show winner
+    Boolean to determine if game over
+		human_win = False
+		AI_win = False
+			helper method() --> have a winner
+			human_win = true or AI_win = true
+			Update field: self.gameover = True
+
+    5. human_player_to_play():
+        if not self.gameover:
+            drop_piece(column)
+            PLAY THE GAME
+
+    6. AI_to_play():
+        if not self.gameover:
+            PLAY THE GAME
+
+------------------------------------------------
+		AI (Some sort of scoring system) still within GameController
+
+3. self.gameover = Boolean to determine if game over
+		4. Boolean/Value to store winner of the game
+		5. self.human_player_turn = Boolean to track if it's human(RED) palyer's a trun
+			alternative 5. self.turn = "HUAMN"
+		6. Value to create a delay/pause (3sec) when its computer's trun
